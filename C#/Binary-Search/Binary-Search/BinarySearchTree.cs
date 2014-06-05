@@ -10,23 +10,30 @@ namespace Binary_Search
     public class BinarySearchTree<T> where T : System.IComparable
     {
         public BinarySearchNode<T> root;
+        private int treesize;
         public BinarySearchTree()
         {
-            
+            treesize = 0;
         }
         public void Insert(T value)
         {
-
+                
         }
+
+        public void Delete(T value)
+        {
+                
+        }
+        public void R
         public void Empty(BinarySearchNode<T> node){
             //Empty tree;
-
+            
         }
 
         public bool isEmpty()
         {
             //Empty tree;
-            return true;
+            return treesize == 0;
 
         }
         public BinarySearchNode<T> Find(T element, BinarySearchNode<T> node)

@@ -15,6 +15,8 @@ namespace Binary_Search
         public BinarySearchNode()
         {
 
+            this.left = null;
+            this.right = null;
 
         }
         public int CompareTo(object obj)
