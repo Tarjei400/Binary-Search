@@ -115,7 +115,7 @@ namespace Binary_Search
         {
             if (node == null)
                 return;
-            Console.WriteLine(node.value.ToString());
+            Console.Write(node.value.ToString()+",");
             PreOrder(node.right);
             PreOrder(node.left);
         }
@@ -127,7 +127,7 @@ namespace Binary_Search
 
             
             InOrder(node.left);
-            Console.WriteLine(node.value.ToString());
+            Console.Write(node.value.ToString()+",");
             InOrder(node.right);
             
         }
@@ -138,7 +138,7 @@ namespace Binary_Search
                 return;
 
             PostOrder(node.right);
-            Console.WriteLine(node.value.ToString());
+            Console.Write(node.value.ToString()+",");
             PostOrder(node.left);
         }
     }

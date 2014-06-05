@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BinarySearchNode.cs" />
     <Compile Include="BinarySearchTree.cs" />
+    <Compile Include="Comparables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

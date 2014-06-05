@@ -5,28 +5,7 @@ using System.Text;
 
 namespace Binary_Search
 {
-   public class IntComparable: System.IComparable
-    {
-       public int value;
-       public IntComparable(int v) { value = v; }
-       public int CompareTo(object obj)
-       {
-           IntComparable tmp = obj as IntComparable;
 
-           if (value < tmp.value)
-               return -1;
-           else if (value > tmp.value)
-               return 1;
-
-            return 0;
-        }
-       public override String ToString()
-       {
-           return "" + this.value;
-       }
-
-       }  
-    
     
     class Program
     {
@@ -46,14 +25,21 @@ namespace Binary_Search
 
             Console.WriteLine("Binary Tree implementation PreOrder.");
             m_tree.PreOrder(m_tree.root);
-
+            Console.WriteLine();
             Console.WriteLine("Binary Tree implementation InOrder.");
             m_tree.InOrder(m_tree.root);
-
+            Console.WriteLine();
             Console.WriteLine("Binary Tree implementation PostOrder.");
             m_tree.PostOrder(m_tree.root);
+            Console.WriteLine();
             Console.WriteLine("Binary Tree implementation end.");
+
+
+
+
             Console.ReadLine();
+
+
 
         }
     }
