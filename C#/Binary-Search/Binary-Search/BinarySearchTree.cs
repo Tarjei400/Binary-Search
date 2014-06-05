@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// 
 namespace Binary_Search
 {
-    public class BinarySearchTree<T> where T : class, System.IComparable<T>
+    public class BinarySearchTree<T> where T : class, System.IComparable
     {
         public BinarySearchNode<T> root;
         private int treesize;
@@ -15,7 +15,7 @@ namespace Binary_Search
         {
             treesize = 0;
         }
-        public BinarySearchNode<T> Insert(T value,ref BinarySearchNode<T> node )
+        public BinarySearchNode<T> Insert(T value, BinarySearchNode<T> node = null)
         {
             if (node == null) 
                 node = new BinarySearchNode<T>(value);
@@ -23,10 +23,10 @@ namespace Binary_Search
             int compare = value.CompareTo(node.value);
             if (compare < 0)
             {
-                node.left = Insert(value,ref node.left);
+                node.left = Insert(value, node.left);
             }
             else if (compare > 0){
-                node.right = Insert(value,ref node.right);
+                node.right = Insert(value, node.right);
             } 
             
             return node;
@@ -111,10 +111,13 @@ namespace Binary_Search
             }
             return node;
         }
-        public List<T> PreOrder()
+        public void PreOrder(BinarySearchNode<T> node)
         {
-
-            return new List<T>();
+            if (node == null)
+                return;
+            Console.WriteLine(node.value.ToString());
+            PreOrder(node.right);
+            PreOrder(node.left);
         }
         public List<T> InOrder()
         {

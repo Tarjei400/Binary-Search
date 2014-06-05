@@ -7,7 +7,7 @@
 namespace Binary_Search
 {
 
-    public class BinarySearchNode<T> : System.IComparable<T> where T :class, System.IComparable<T>
+    public class BinarySearchNode<T> : System.IComparable where T :class, System.IComparable
     {
         public BinarySearchNode<T> left;
         public BinarySearchNode<T> right;
@@ -26,5 +26,6 @@ namespace Binary_Search
 
             return this.value.CompareTo(tmp.value);
         }
+
     }
 }

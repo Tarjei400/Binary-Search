@@ -1,0 +1,4 @@
+C:\Users\WorK\Desktop\Binary-Search\C#\Binary-Search\Binary-Search\bin\Debug\Binary-Search.exe
+C:\Users\WorK\Desktop\Binary-Search\C#\Binary-Search\Binary-Search\bin\Debug\Binary-Search.pdb
+C:\Users\WorK\Desktop\Binary-Search\C#\Binary-Search\Binary-Search\obj\x86\Debug\Binary-Search.exe
+C:\Users\WorK\Desktop\Binary-Search\C#\Binary-Search\Binary-Search\obj\x86\Debug\Binary-Search.pdb
