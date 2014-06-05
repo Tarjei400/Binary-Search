@@ -33,9 +33,42 @@ namespace Binary_Search
             
         }
 
-        public void Delete(T value, ref BinarySearchNode<T> node)
+        public BinarySearchNode<T> Delete(T value,  BinarySearchNode<T> node)
         {
-                if 
+            BinarySearchNode<T> TmpNode;
+
+            if (node == null)
+                return null;
+
+            int compare = value.CompareTo(node.value);
+            if (compare < 0)
+            {
+                node.left = Delete(value, node.left);
+            }
+            else if (compare > 0)
+            {
+                node.right = Delete(value,  node.right);
+            }
+            else if (node.left != null && node.right != null)
+            {
+                TmpNode = MinFind(node.right);
+                node.value = TmpNode.value;
+                node.right = Delete(node.value, node.right);
+            }
+            else {
+                TmpNode = node;
+                if (node.left == null)
+                    node = node.right;
+                else if (node.right == null)
+                    node = node.left;
+                else
+                {
+                    node = null;
+                }
+
+
+            }
+            return node;
         }
         public void Empty(BinarySearchNode<T> node){
             //Empty tree;
