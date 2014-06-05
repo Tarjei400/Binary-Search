@@ -23,20 +23,36 @@ namespace Binary_Search
 
 
 
-            Console.WriteLine("Binary Tree implementation PreOrder.");
+            Console.WriteLine("Binary Int Tree implementation PreOrder.");
             m_tree.PreOrder(m_tree.root);
             Console.WriteLine();
-            Console.WriteLine("Binary Tree implementation InOrder.");
+            Console.WriteLine("Binary Int Tree implementation InOrder.");
             m_tree.InOrder(m_tree.root);
             Console.WriteLine();
-            Console.WriteLine("Binary Tree implementation PostOrder.");
+            Console.WriteLine("Binary Int Tree implementation PostOrder.");
             m_tree.PostOrder(m_tree.root);
             Console.WriteLine();
-            Console.WriteLine("Binary Tree implementation end.");
+            Console.WriteLine("Binary Int Tree implementation end.");
 
+            BinarySearchTree<StringComparable> m_stringtree = new BinarySearchTree<StringComparable>();
 
-
-
+            String[] str_arr = { "Adrian", "Ada", "Zuzanna", "Marcin", "Katarzyna", "Felicjan"};
+            List<String> stringset = new List<String>(str_arr);
+            foreach (String v in stringset)
+            {
+                StringComparable v1 = new StringComparable(v);
+                m_stringtree.root = m_stringtree.Insert(v1, m_stringtree.root);
+            }
+            Console.WriteLine("Binary String Tree implementation PreOrder.");
+            m_stringtree.PreOrder(m_stringtree.root);
+            Console.WriteLine();
+            Console.WriteLine("Binary String Tree implementation InOrder.");
+            m_stringtree.InOrder(m_stringtree.root);
+            Console.WriteLine();
+            Console.WriteLine("Binary String Tree implementation PostOrder.");
+            m_stringtree.PostOrder(m_stringtree.root);
+            Console.WriteLine();
+            Console.WriteLine("Binary String Tree implementation end.");
             Console.ReadLine();
 
 
