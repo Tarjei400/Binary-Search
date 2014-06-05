@@ -3,12 +3,17 @@
 /// <summary>
 /// Summary description for Class1
 /// </summary>
-public class BinarySearchTree
+/// 
+namespace Binary_Search
 {
-    public BinarySearchTree()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public class BinarySearchTree
+    {
+
+        public BinarySearchTree()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
+    }
 }

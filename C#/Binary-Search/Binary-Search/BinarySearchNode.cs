@@ -3,14 +3,26 @@
 /// <summary>
 /// Summary description for Class1
 /// </summary>
-public class BinarySearchNode<T> where T : System.IComparable<T>
+/// 
+namespace Binary_Search
 {
-    private BinarySearchNode<T> left;
-    private BinarySearchNode<T> right;
-    public BinarySearchNode()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+
+    public class BinarySearchNode<T> : System.IComparable<T> where T :class, System.IComparable<T>
+    {
+        private BinarySearchNode<T> left;
+        private BinarySearchNode<T> right;
+        public T value;
+        public BinarySearchNode()
+        {
+
+
+        }
+        public int CompareTo(object obj)
+        {
+            BinarySearchNode<T> tmp = obj as BinarySearchNode<T>;
+            if (tmp == null) throw new ArgumentException("Wrong generic type sypplied in to binar search tree.");
+
+            return this.value.CompareTo(tmp.value);
+        }
+    }
 }
