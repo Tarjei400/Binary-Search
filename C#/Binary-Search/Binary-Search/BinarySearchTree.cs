@@ -24,7 +24,8 @@ namespace Binary_Search
             if (compare < 0)
             {
                 node.left = Insert(value,ref node.left);
-            }else if (compare > 0){
+            }
+            else if (compare > 0){
                 node.right = Insert(value,ref node.right);
             } 
             
@@ -32,9 +33,9 @@ namespace Binary_Search
             
         }
 
-        public void Delete(T value)
+        public void Delete(T value, ref BinarySearchNode<T> node)
         {
-                
+                if 
         }
         public void Empty(BinarySearchNode<T> node){
             //Empty tree;
@@ -54,12 +55,28 @@ namespace Binary_Search
         }
         public BinarySearchNode<T> MinFind(BinarySearchNode<T> node)
         {
-            return null;
+            if (node == null)
+                return null;
+
+            while (node.left != null)
+            {
+                node = node.left;
+
+            }
+            return node;
         }
 
         public BinarySearchNode<T> MaxFind(BinarySearchNode<T> node)
         {
-            return null;
+            if (node == null)
+                return null;
+
+            while (node.right != null)
+            {
+                node = node.right;
+
+            }
+            return node;
         }
         public List<T> PreOrder()
         {
