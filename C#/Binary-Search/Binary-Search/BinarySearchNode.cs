@@ -9,15 +9,15 @@ namespace Binary_Search
 
     public class BinarySearchNode<T> : System.IComparable<T> where T :class, System.IComparable<T>
     {
-        private BinarySearchNode<T> left;
-        private BinarySearchNode<T> right;
+        public BinarySearchNode<T> left;
+        public BinarySearchNode<T> right;
         public T value;
-        public BinarySearchNode()
+        public BinarySearchNode(T value)
         {
 
             this.left = null;
             this.right = null;
-
+            this.value = value;
         }
         public int CompareTo(object obj)
         {
