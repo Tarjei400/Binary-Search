@@ -41,12 +41,17 @@ namespace Binary_Search
                  IntComparable v1 = new IntComparable(v); 
                  m_tree.root =  m_tree.Insert(v1 , m_tree.root);
             }
-            
 
-          
 
+
+            Console.WriteLine("Binary Tree implementation PreOrder.");
             m_tree.PreOrder(m_tree.root);
 
+            Console.WriteLine("Binary Tree implementation InOrder.");
+            m_tree.InOrder(m_tree.root);
+
+            Console.WriteLine("Binary Tree implementation PostOrder.");
+            m_tree.PostOrder(m_tree.root);
             Console.WriteLine("Binary Tree implementation end.");
             Console.ReadLine();
 

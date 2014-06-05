@@ -119,15 +119,27 @@ namespace Binary_Search
             PreOrder(node.right);
             PreOrder(node.left);
         }
-        public List<T> InOrder()
+        public void InOrder(BinarySearchNode<T> node)
         {
 
-            return new List<T>();
+            if (node == null)
+                return;
+
+            
+            InOrder(node.left);
+            Console.WriteLine(node.value.ToString());
+            InOrder(node.right);
+            
         }
-        public List<T> PostOrder()
+        public void PostOrder(BinarySearchNode<T> node)
         {
 
-            return new List<T>();
+            if (node == null)
+                return;
+
+            PostOrder(node.right);
+            Console.WriteLine(node.value.ToString());
+            PostOrder(node.left);
         }
     }
 }
